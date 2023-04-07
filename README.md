@@ -16,7 +16,7 @@ To implement dragging functionality, a custom directive was created. It utilizes
 
 But there are also cons of this approach
 * by not using popular libraries for those features and creating everything on our own, we sacrifice the simplicity of the code
-* Angular CDK also provides more tools to expand your features
+* for example, Angular Material CDK provides the functionality to work with various overlays, portals, etc. It could simplify further extension of functionality for this application
 
 ## Known solutions
 To avoid such problems, we can use already known solutions, such as Angular Material with Angular CDK(Drag&Drop, Portal, Overlay), which are high-level solutions with simple APIs.
