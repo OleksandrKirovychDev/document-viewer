@@ -1,3 +1,4 @@
+
 To run a project on port 4200, run `npm i` and then `npm start`;
 
 ## How it works
@@ -21,3 +22,9 @@ But there are also cons of this approach
 To avoid such problems, we can use already known solutions, such as Angular Material with Angular CDK(Drag&Drop, Portal, Overlay), which are high-level solutions with simple APIs.
 
 To improve the project's extensibility, it would be better to create some abstract/generic classes, particularly for annotations, to reduce code duplication, and to make adding custom annotations easier.
+
+### Screenshots of the task
+![1](https://user-images.githubusercontent.com/118730686/230627439-505149e2-285b-47e2-900d-c85d5592dc98.png)
+![2](https://user-images.githubusercontent.com/118730686/230627443-b550aea2-1803-4459-8039-c0c52a40b4b4.png)
+![3](https://user-images.githubusercontent.com/118730686/230627446-36af7900-0baf-4147-8266-39a23b732db5.png)
+![4](https://user-images.githubusercontent.com/118730686/230627448-55a9dee3-1a55-4644-827c-d44a559233f3.png)
