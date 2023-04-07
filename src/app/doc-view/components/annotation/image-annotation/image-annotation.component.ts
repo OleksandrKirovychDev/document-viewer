@@ -29,8 +29,8 @@ export class ImageAnnotationComponent {
 
     if (files && files[0]) {
       const file = files[0];
-      //const reader = new FileReader();
-     this.reader.onload = () => {
+      const reader = new FileReader();
+      this.reader.onload = () => {
         this.updateContent.emit(this.reader.result as string);
       };
       this.reader.readAsDataURL(file);
