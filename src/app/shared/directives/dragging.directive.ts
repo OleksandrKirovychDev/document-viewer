@@ -10,14 +10,7 @@ import {
 } from '@angular/core';
 import { DOCUMENT } from '@angular/common';
 
-import {
-  fromEvent,
-  Subject,
-  Subscription,
-  switchMap,
-  takeUntil,
-  tap,
-} from 'rxjs';
+import { fromEvent, Subject, switchMap, takeUntil, tap } from 'rxjs';
 
 import { ICoords } from '../models/annotation.model';
 
