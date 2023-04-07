@@ -19,4 +19,12 @@ describe('TextAnnotationComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  describe('Method: changeContent()', () => {
+    it('should emit', () => {
+      spyOn(component.updateContent, 'emit').and.callThrough();
+      component.changeContent();
+      expect(component.updateContent.emit).toHaveBeenCalled();
+    });
+  });
 });
