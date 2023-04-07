@@ -1,0 +1,37 @@
+{
+  "docs": [
+    {
+      "id": 1,
+      "annotations": [],
+      "paths": [
+        "assets/pages/1.png",
+        "assets/pages/2.png",
+        "assets/pages/3.png",
+        "assets/pages/4.png",
+        "assets/pages/5.png"
+      ]
+    },
+    {
+      "id": 2,
+      "annotations": [],
+      "paths": [
+        "assets/pages/1.png",
+        "assets/pages/2.png",
+        "assets/pages/3.png",
+        "assets/pages/4.png",
+        "assets/pages/5.png"
+      ]
+    },
+    {
+      "id": 3,
+      "annotations": [],
+      "paths": [
+        "assets/pages/1.png",
+        "assets/pages/2.png",
+        "assets/pages/3.png",
+        "assets/pages/4.png",
+        "assets/pages/5.png"
+      ]
+    }
+  ]
+}
