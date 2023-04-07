@@ -12,7 +12,7 @@
     transform: 'rotate(' + annotation.rotateDeg + 'rad)'
   }"
 >
-  <div class="delete" (click)="delete()">&#10006;</div>
+  <div class="delete" (click)="delete(annotation.id)">&#10006;</div>
   <div class="rotate">
     <img src="./assets/icons/rotate.png" alt="rotate icon" />
   </div>

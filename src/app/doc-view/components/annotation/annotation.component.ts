@@ -48,7 +48,7 @@ export class AnnotationComponent {
     this.updateAnnotation.emit(updatedAnnotation);
   }
 
-  public delete() {
-    this.deleteAnnotation.emit(this.annotation.id);
+  public delete(annotationId: number) {
+    this.deleteAnnotation.emit(annotationId);
   }
 }
