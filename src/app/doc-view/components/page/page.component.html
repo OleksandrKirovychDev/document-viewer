@@ -1,0 +1,36 @@
+<div
+  class="document-container"
+  [id]="'page-' + page"
+  (click)="onClick($event)"
+  (clickOutside)="closeTypeSelect()"
+>
+  <img class="image-page" [src]="image" alt="page" />
+
+  <ng-container *ngFor="let annotation of pageAnnotations">
+    <ng-container *ngIf="annotation.docId === docId">
+      <app-annotation
+        [annotation]="annotation"
+        [containerId]="'page-' + page"
+        (deleteAnnotation)="deleteAnnotation($event)"
+        (updateAnnotation)="updateAnnotation($event)"
+        (click)="closeAnnotationSelect($event)"
+      ></app-annotation>
+    </ng-container>
+  </ng-container>
+
+  <div
+    class="annotation-type-select"
+    *ngIf="showOptions"
+    [ngStyle]="{
+      top: currentClickedCoordinates.y + 'px',
+      left: currentClickedCoordinates.x + 'px'
+    }"
+  >
+    <div class="item" (click)="createAnnotation('text')">
+      <img src="./assets/icons/text.png" alt="text icon" />
+    </div>
+    <div class="item" (click)="createAnnotation('image')">
+      <img src="./assets/icons/image.png" alt="image icon" />
+    </div>
+  </div>
+</div>

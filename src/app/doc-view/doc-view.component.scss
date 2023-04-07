@@ -1,0 +1,11 @@
+.pages {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 100px;
+}
+app-page {
+  transition: all 0.2s;
+}

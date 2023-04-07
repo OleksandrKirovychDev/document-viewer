@@ -1,0 +1,6 @@
+<span class="zoom-value">{{
+  (zoomAnimationService.zoomValue$ | async)! * 100 | number: '1.0-0'
+}}</span>
+<button (click)="zoomAnimationService.zoomIn()">+</button>
+<button (click)="zoomAnimationService.zoomOut()">-</button>
+<button (click)="annotationsService.saveContent()">Save</button>

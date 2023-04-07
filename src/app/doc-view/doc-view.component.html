@@ -1,0 +1,17 @@
+<div *ngIf="doc$ | async as doc" class="pages">
+  <app-page
+    *ngFor="let page of doc.paths; let i = index"
+    [image]="page"
+    [page]="i + 1"
+    [docId]="doc.id"
+    [pageAnnotations]="
+      (annotations$ | async)! | dynamicFilter : { page: i + 1 }
+    "
+    [style.width]="
+      defaultWidth * (zoomAnimationService.zoomValue$ | async)! + 'px'
+    "
+    (createAnnotationEmitter)="createAnnotation($event)"
+    (updateAnnotationEmitter)="updateAnnotation($event)"
+    (deleteAnnotationEmitter)="deleteAnnotation($event)"
+  ></app-page>
+</div>

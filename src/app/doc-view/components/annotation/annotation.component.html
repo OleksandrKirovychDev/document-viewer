@@ -1,0 +1,31 @@
+<div
+  class="annotation_wrapp"
+  appDragging
+  [startPosition]="annotation.coords"
+  [startRotateDeg]="annotation.rotateDeg"
+  [boundaryQuery]="'#' + containerId"
+  (newCoordinates)="setUpdatedAnnotationCoords($event)"
+  (newRotateDeg)="setUpdatedAnnotationRotateDeg($event)"
+  [ngStyle]="{
+    top: annotation.coords.y + 'px',
+    left: annotation.coords.x + 'px',
+    transform: 'rotate(' + annotation.rotateDeg + 'rad)'
+  }"
+>
+  <div class="delete" (click)="delete()">&#10006;</div>
+  <div class="rotate">
+    <img src="./assets/icons/rotate.png" alt="rotate icon" />
+  </div>
+  <ng-container [ngSwitch]="annotation.type">
+    <app-text-annotation
+      [annotation]="annotation"
+      *ngSwitchCase="'text'"
+      (updateContent)="setUpdatedAnnotationContent($event)"
+    ></app-text-annotation>
+    <app-image-annotation
+      [annotation]="annotation"
+      *ngSwitchCase="'image'"
+      (updateContent)="setUpdatedAnnotationContent($event)"
+    ></app-image-annotation>
+  </ng-container>
+</div>

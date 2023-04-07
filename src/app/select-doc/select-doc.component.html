@@ -1,0 +1,6 @@
+<div class="select-doc" *ngIf="docs$ | async as docs">
+  <h3>Select Document</h3>
+  <div class="doc-link" *ngFor="let doc of docs">
+    <a [routerLink]="'view/' + doc.id">{{ doc.id }}</a>
+  </div>
+</div>

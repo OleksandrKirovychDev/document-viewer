@@ -1,0 +1,35 @@
+.document-container {
+  margin: auto;
+  height: fit-content;
+  position: relative;
+}
+
+.annotation-type-select {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background-color: #507963;
+  border-radius: 4px 8px;
+  color: white;
+  padding: 6px;
+
+  img {
+    width: 24px;
+    height: 24px;
+    border: 1px solid white;
+    border-radius: 4px;
+    padding: 4px;
+  }
+
+  & > div {
+    flex: 1;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+  }
+}
+.image-page {
+  width: 100%;
+  max-width: 100vw;
+}

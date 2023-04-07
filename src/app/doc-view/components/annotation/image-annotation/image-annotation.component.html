@@ -1,0 +1,9 @@
+<div class="image-annotation">
+  <input
+    *ngIf="!annotation.content"
+    type="file"
+    accept="image/png, image/jpeg"
+    (change)="readURL($event)"
+  />
+  <img *ngIf="annotation.content" [src]="annotation.content" alt="your image" />
+</div>

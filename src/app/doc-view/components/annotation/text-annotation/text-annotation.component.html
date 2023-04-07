@@ -1,0 +1,13 @@
+<div class="text-annotation">
+  <input
+    (blur)="changeContent()"
+    (keyup.enter)="changeContent()"
+    *ngIf="!annotation.content; else annotationContent"
+    type="text"
+    [formControl]="annotationText"
+    autofocus
+  />
+  <ng-template #annotationContent>
+    <p>{{ annotation.content }}</p>
+  </ng-template>
+</div>
